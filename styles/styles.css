@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: lightskyblue;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.links a {
+    margin: 0 .5rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.links a:hover {
+    color: #fff;
+    background-color: #000;
+    padding: .3rem;
+    border-radius: 8px;
+    transition: all .05s ease-in-out;
+}
