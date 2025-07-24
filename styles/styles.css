@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
+/* ------Header section--------- */
 .header {
-    background: lightskyblue;
     padding: 1rem;
 }
 
@@ -17,8 +17,8 @@
 }
 
 .logo img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 8px;
 }
 
@@ -33,4 +33,66 @@
     color: red;
     border-radius: 8px;
     transition: all .05s ease-in-out;
+}
+
+/* -------Main section------- */
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background: linear-gradient(135deg, #6a88ff, #a66dd4);
+}
+
+.hero h1{
+    width: 60%;
+    font-size: 4rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.hero p {
+    width: 42%;
+    font-size: 1.2rem;
+    color: white;
+    padding: 1rem 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.button1 {
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: blue;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button2 {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    font-size: 1rem;
+}
+
+.button1,
+.button2 {
+    cursor: pointer;
+    transition: tranfsform 0.3s ease-in-out;
+}
+
+.button1:hover {
+    transform: translateY(-5px);
+}
+
+.button2:hover {
+    background-color: #fff;
+    color: blue;
 }
