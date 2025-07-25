@@ -37,21 +37,26 @@
 
 /* -------Main section------- */
 .main-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
+    margin: 0 auto;
+}
+
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 4rem;
     background: linear-gradient(135deg, #6a88ff, #a66dd4);
 }
 
 .hero h1{
-    width: 60%;
+    width: 65%;
     font-size: 4rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
 
 .hero p {
-    width: 42%;
+    width: 60%;
     font-size: 1.2rem;
     color: white;
     padding: 1rem 0;
@@ -61,6 +66,7 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding: 1rem 0 1rem 0;
 }
 
 .button1 {
@@ -95,4 +101,46 @@
 .button2:hover {
     background-color: #fff;
     color: blue;
+}
+
+/* Second section[hero-image] */
+.hero-image {
+    position: relative;
+    width: 45%;
+    height: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #f0f0f024;
+}
+
+.hero-image i {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    color: #fff;
+}
+
+.hero-image p {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 500px;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
