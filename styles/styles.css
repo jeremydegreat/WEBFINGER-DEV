@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
 /* ------Header section--------- */
 .header {
     padding: 1rem;
@@ -193,4 +198,78 @@
     transform: translateY(-10px);
     transition: transform 0.3s ease-in-out;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* About our Company */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+
+.about-text h4 {
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: grey;
+    margin-bottom: 1rem;
+}
+
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats h5 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(71, 71, 197);
+}
+
+.stats p {
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.stats h5,
+.stats p {
+    margin: .5rem 0;
+}
+
+
+.office-img {
+    background-color: rgb(71, 71, 197);
+    position: relative;
+    border-radius: 8px;
+    width: 50%;
+    margin: 1rem auto;
+}
+.office-img i {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.office-img p {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    font-size: 1.7rem;
+    color: #fff;
 }
