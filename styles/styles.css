@@ -7,6 +7,8 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    /* max-width: 1200px; */
+    margin: 1rem auto;
 }
 
 /* ------Header section--------- */
@@ -173,14 +175,14 @@ body {
 }
 
 .card i {
-    font-size: 2rem;
+    font-size: 2.3rem;
     background-color: rgb(71, 71, 197);
     color: #fff;
     padding: 1rem;
     border-radius: 50%;
     margin-bottom: 1rem;
     width: 75px;
-    height: auto;
+    height: 75px;
 }
 
 .card h3 {
@@ -272,4 +274,165 @@ body {
     left: 35%;
     font-size: 1.7rem;
     color: #fff;
+}
+
+/* ------Our Services--------- */
+.our-services {
+    padding: 2rem 4rem;
+    background-color: #f0f0f085;
+}
+
+.our-services h6 {
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    text-align: center;
+}
+
+#our-services {
+    font-size: 1.2rem;
+    color: grey;
+    text-align: center;
+    padding: 1rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: start;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card i {
+    font-size: 2rem;
+    background-color: rgb(85, 182, 61);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.learn-more {
+    text-decoration: none;
+    color: rgb(71, 71, 197);
+    font-weight: 600;
+    font-size: 1.2rem;
+    align-items: center;
+    display: inline-flex;
+}
+
+.learn-more .arrow {
+    margin-left: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.learn-more:hover .arrow {
+    color: red;
+    transform: translateX(5px);
+    
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Testimonies of Our Clients */
+.testimonies {
+    padding: 2rem 4rem;
+}
+
+.testimonies h6 {
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    text-align: center;
+}
+
+#testimonies-p {
+    font-size: 1.2rem;
+    color: grey;
+    text-align: center;
+    padding: 1rem;
+}
+
+.testimonies-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.testimonies-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: start;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid rgb(71, 71, 197);
+}
+
+#testimonies-card-p {
+    font-style: italic;
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.testimonies-card-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonies-card-user i {
+    font-size: 1.1rem;
+    background-color: rgb(71, 71, 197);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.card-user-btm h5 {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.card-user-btm p {
+    font-size: 1rem;
+    color: grey;
+}
+
+.testimonies-card:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
 }
