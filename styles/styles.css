@@ -566,7 +566,7 @@ body {
 }
 
 /* ------Footer section----- */
-footer {
+.footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: #f0f0f0;
     align-items: flex-start;
@@ -652,7 +652,7 @@ footer {
 
 .quick-links a:hover {
     color: rgb(71, 71, 197);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
 
@@ -668,14 +668,14 @@ footer {
     color: #fff;
 }
 
-.service-links p {
+.service-links a {
     font-size: 1rem;
     color: rgb(180, 180, 180);
 }
 
 .service-links p:hover {
     color: rgb(71, 71, 197);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
 
@@ -690,6 +690,15 @@ footer {
     font-size: 1.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
+}
+
+.contact-links div i {
+    color: rgb(180, 180, 180);
+}
+
+.contact-links div p {
+    font-size: 1rem;
+    color: rgb(180, 180, 180);
 }
 
 
