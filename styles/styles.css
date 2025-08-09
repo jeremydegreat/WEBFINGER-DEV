@@ -673,7 +673,7 @@ body {
     color: rgb(180, 180, 180);
 }
 
-.service-links p:hover {
+.service-links a:hover {
     color: rgb(71, 71, 197);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
