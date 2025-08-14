@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar - Flexbox & Media Queries</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#" class="navbar-logo">
+                <span>🚀</span>
+                <span>FlexNav</span>
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#services">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#web-design">Web Design</a></li>
+                        <li><a href="#development">Development</a></li>
+                        <li><a href="#consulting">Consulting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="navbar-toggle" id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="container">
+            <h1>Responsive Navbar</h1>
+            <p>A comprehensive responsive navigation bar built with CSS Flexbox and Media Queries. 
+               Resize your browser window to see how it adapts to different screen sizes.
+            </p>
+        </div>
+    </div>
+    <script src="navbar.js"></script>
+</body>
+</html> 
