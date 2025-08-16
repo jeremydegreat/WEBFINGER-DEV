@@ -7,7 +7,6 @@
 body {
     padding: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: antiquewhite;
     color: #333;
 }
 
@@ -15,6 +14,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    /* background-color: black; */
 
 }
 
@@ -24,8 +24,39 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.cal-container {
+    padding: 1rem .5rem;
+    background-color: black;
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+
+}
+
 .screen {
-    width: 50%;
+    width: 90%;
     height: 100px;
     background-color: aliceblue;
+    border: 2px solid #333;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.buttons {
+    position: relative;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1.5rem;
+}
+
+tr, td {
+    border: 2px solid #333;
+    border-collapse: collapse;
+    border-radius: 15px;
+    padding: 1rem;
+
 }
