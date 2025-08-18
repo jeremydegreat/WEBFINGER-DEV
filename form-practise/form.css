@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+    max-width: 1200px;
+    background-color: rgb(248, 248, 248);
+    margin: 0 auto;
+}
+
+
+/* Main Page starts from here */
+main {
+    margin: 1rem 2rem;
+}
+
+
 /* Header section */
 .header {
     display: block;
@@ -12,5 +26,401 @@
 
 .container {
     display: flex;
-    background-color: ;
+    background-color: rgb(27, 52, 121);
+    flex-direction: column;
+    gap: .8rem;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+/* Logo style */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(74, 96, 157);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    border: 2px solid rgb(172, 172, 172);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container h1 {
+    font-size: 2rem;
+}
+
+.container p {
+    font-size: 1.2rem;
+}
+
+.form-hd-detail {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: rgba(172, 172, 172, 0.17);
+    padding: .5rem;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.form-hd-detail p {
+    font-size: .7rem;
+}
+
+
+/* Combination of the neccessary Information */
+.personal-info,
+.contact,
+.idtfn,
+.driver-info,
+.medical-info,
+.declaration {
+    padding: 2rem 1rem 4rem 1rem;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #000;
+}
+
+.personal-info {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.declaration {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.personal-info h2,
+.cti-container h3,
+.idtfn-container h4,
+.medical-info h4,
+.driver-info h4,
+.declaration h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: Verdana, sans-serif;
+    color: rgb(27, 52, 121);
+    margin-bottom: 1.2rem;
+}
+
+.personal-info h2::after,
+.cti-container h3::after,
+.idtfn-container h4::after,
+.medical-info h4::after,
+.driver-info h4::after,
+.declaration h4::after {
+    content: "";                
+    display: block;             
+    width: 20%;                 
+    border-bottom: 2.3px solid #000; 
+    margin-top: 5px;
+    color: rgb(27, 52, 121);            
+}
+
+.form-body label,
+.contact-info label,
+.contact-csp label,
+.contact-info-address label,
+.idtfn-body label,
+.driver-info-body label,
+.medical-info-body label,
+.medical-info-body-mdc label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.form-body input,
+.form-body select,
+.contact-info input,
+.contact-csp input,
+.contact-csp select,
+.idtfn-body input,
+.driver-info-body input,
+.driver-info-body select,
+.medical-info-body select,
+.medical-info-body input {
+    padding: .5rem;
+    border: 1.2px solid rgb(163, 161, 161);
+    border-radius: 8px;
+    background-color: rgb(243, 241, 241);
+}
+
+
+
+/* Personal Information section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.form-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .6rem;
+}
+
+
+
+/* Contact Section */
+.contact {
+    position: relative;
+}
+
+.cti-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.contact-info-address {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contact-csp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.contact-info-address textarea {
+    padding: .5rem;
+    height: 60px;
+    border-radius: 8px;
+    background-color: rgb(243, 241, 241);
+}
+
+/* Identification styling */
+.idtfn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.idtfn-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+
+}
+
+/* table styling */
+.passport,
+.driver-id {
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 8px;background-color: rgb(243, 241, 241);
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+}
+
+.passport i,
+.driver-id i {
+    font-size: 2rem;
+    padding: .5rem;
+    color: #ccc;
+}
+
+/* Driver Information styling */
+.driver-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.driver-info-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .5rem;
+}
+
+/* Medical Information styling */
+.medical-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.medical-info-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.medical-info-body-mdc {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+.medical-info-body-mdc input {
+    padding: .5rem;
+    border: 1.2px solid rgb(163, 161, 161);
+    border-radius: 8px;
+    background-color: rgb(243, 241, 241);
+    height: 70px;
+}
+
+
+/* Declaration Term styling */
+.declaration-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.declaration-info-body {
+    margin-bottom: 1rem; 
+}
+
+.declaration-info-body label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem; 
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: .8rem;
+    border: 1px solid rgb(163, 161, 161);
+    background-color: rgb(243, 241, 241);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.declaration-info-body input[type="checkbox"] {
+    margin-top: 0.2rem; 
+}
+
+
+/* Button section styling */
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    margin-bottom: -3rem;
+}
+
+
+.button button {
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor:pointer;
+    border-radius: 10px;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.button div:nth-child(1) button {
+    background-color: rgb(96, 94, 94);
+}
+
+.button div:nth-child(2) button {
+    background-color: navy;
+}
+
+.button div:nth-child(3) button {
+    background-color: red;
+}
+
+
+
+
+
+/* For Tablet Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        position: inherit;
+    }
+
+    .container {
+        background-color: rgb(53, 81, 72);
+        gap: .5rem;
+        padding: .8rem;
+    }
+
+    .logo-container span {
+        font-size: 1.3rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .form-hd-detail p {
+        font-size: .6rem;
+    } 
+    
+    /* Combination of the necessary Information */
+    .personal-info,
+    .contact,
+    .idtfn,
+    .driver-info,
+    .medical-info,
+    .declaration {
+        padding: 1.5rem .8rem 3.5rem .8rem;
+    }
+
+    .personal-info h2,
+    .cti-container h3,
+    .idtfn-container h4,
+    .medical-info h4,
+    .declaration h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    /* Personal Information section */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .6rem;
+    }
+
+    /* Make 3rd item span across 2 columns */
+    .form-body > :nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .form-body label {
+        font-size: .9rem;
+    }
+
+    .form-body input,
+    .form-body select {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        padding: .4rem;
+    }
 }
