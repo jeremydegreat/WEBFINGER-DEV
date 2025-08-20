@@ -1,3 +1,4 @@
+/* Initializing rules */
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +10,6 @@ body {
     max-width: 1200px;
     background-color: rgb(248, 248, 248);
     margin: 0 auto;
-}
-
-
-/* Main Page starts from here */
-main {
-    margin: 1rem 2rem;
 }
 
 
@@ -36,6 +31,14 @@ main {
     color: #f0f0f0;
 }
 
+.container h1 {
+    font-size: 2rem;
+}
+
+.container p {
+    font-size: 1.2rem;
+}
+
 /* Logo style */
 .logo-container {
     display: flex;
@@ -55,13 +58,6 @@ main {
     font-weight: bold;
 }
 
-.container h1 {
-    font-size: 2rem;
-}
-
-.container p {
-    font-size: 1.2rem;
-}
 
 .form-hd-detail {
     display: flex;
@@ -78,20 +74,26 @@ main {
 }
 
 
+/* Main Page styling starts here */
+main {
+    margin: 1rem 2rem;
+}
+
+
 /* Combination of the neccessary Information */
-.personal-info,
+.personal-container,
 .contact,
 .idtfn,
-.driver-info,
-.medical-info,
+.driver,
+.medical,
 .declaration {
     padding: 2rem 1rem 4rem 1rem;
     background-color: #fff;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid grey
 }
 
-.personal-info {
+.personal-container {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -101,12 +103,12 @@ main {
     border-bottom-right-radius: 10px;
 }
 
-.personal-info h2,
-.cti-container h3,
+.personal-container h2,
+.contact-container h3,
 .idtfn-container h4,
-.medical-info h4,
-.driver-info h4,
-.declaration h4 {
+.medical-container h4,
+.driver-container h4,
+.declaration-container h4 {
     font-size: 1.2rem;
     font-weight: 600;
     font-family: Verdana, sans-serif;
@@ -114,12 +116,12 @@ main {
     margin-bottom: 1.2rem;
 }
 
-.personal-info h2::after,
-.cti-container h3::after,
+.personal-container h2::after,
+.contact-container h3::after,
 .idtfn-container h4::after,
-.medical-info h4::after,
-.driver-info h4::after,
-.declaration h4::after {
+.medical-container h4::after,
+.driver-container h4::after,
+.declaration-container h4::after {
     content: "";                
     display: block;             
     width: 20%;                 
@@ -128,49 +130,56 @@ main {
     color: rgb(27, 52, 121);            
 }
 
-.form-body label,
-.contact-info label,
-.contact-csp label,
-.contact-info-address label,
-.idtfn-body label,
-.driver-info-body label,
-.medical-info-body label,
-.medical-info-body-mdc label {
+.personal-group label,
+.contact-group label,
+.contact-body-address label,
+.idtfn-group label,
+.driver-group label,
+.medical-group label,
+.medical-body-mdc label {
     font-size: 1rem;
     font-weight: bold;
     color: #000;
 }
 
-.form-body input,
-.form-body select,
-.contact-info input,
-.contact-csp input,
-.contact-csp select,
+.personal-group input,
+.personal-group select,
+.contact-group input,
+.contact-group select,
+.idtfn-group input,
 .idtfn-body input,
-.driver-info-body input,
-.driver-info-body select,
-.medical-info-body select,
-.medical-info-body input {
-    padding: .5rem;
+.driver-body input,
+.driver-group select,
+.medical-group select,
+.medical-group input {
+    padding: .6rem;
     border: 1.2px solid rgb(163, 161, 161);
     border-radius: 8px;
     background-color: rgb(243, 241, 241);
 }
 
+.personal-group,
+.contact-group,
+.idtfn-group,
+.driver-group,
+.medical-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
 
 
 /* Personal Information section */
-form {
+.personal-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.form-body {
+.personal-body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: .6rem;
 }
-
 
 
 /* Contact Section */
@@ -178,20 +187,19 @@ form {
     position: relative;
 }
 
-.cti-container {
+.contact-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-
-.contact-info {
+.contact-body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
 }
 
-.contact-info-address {
+.contact-body-address {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -202,7 +210,7 @@ form {
     grid-gap: 1rem;
 }
 
-.contact-info-address textarea {
+.contact-body-address textarea {
     padding: .5rem;
     height: 60px;
     border-radius: 8px;
@@ -220,10 +228,14 @@ form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-
 }
 
 /* table styling */
+.table-heading {
+    font-size: 1rem;
+    text-align: center;
+}
+
 .passport,
 .driver-id {
     height: 100px;
@@ -241,39 +253,47 @@ form {
     color: #ccc;
 }
 
+.passport p,
+.driver-id p {
+    font-size: 1rem;
+    padding: .5rem;
+    color: #969595;
+}
+
+
 /* Driver Information styling */
-.driver-info {
+.driver-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.driver-info-body {
+.driver-body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: .5rem;
 }
 
 /* Medical Information styling */
-.medical-info {
+.medical-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.medical-info-body {
+.medical-body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
 }
 
-.medical-info-body-mdc {
+.medical-body-mdc {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
 
-.medical-info-body-mdc input {
+.medical-body-mdc input {
     padding: .5rem;
     border: 1.2px solid rgb(163, 161, 161);
     border-radius: 8px;
@@ -283,20 +303,23 @@ form {
 
 
 /* Declaration Term styling */
-.declaration-info {
+.declaration-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.declaration-body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    
 }
 
-.declaration-info-body {
-    margin-bottom: 1rem; 
-}
-
-.declaration-info-body label {
+.declaration-group label {
     display: flex;
     align-items: flex-start;
-    gap: 0.5rem; 
+    gap: .5rem; 
     font-size: 0.9rem;
     line-height: 1.4;
     padding: .8rem;
@@ -306,7 +329,7 @@ form {
     cursor: pointer;
 }
 
-.declaration-info-body input[type="checkbox"] {
+.declaration-group input[type="checkbox"] {
     margin-top: 0.2rem; 
 }
 
@@ -345,8 +368,6 @@ form {
 
 
 
-
-
 /* For Tablet Devices */
 @media (min-width: 769px) and (max-width: 1024px) {
     .header {
@@ -375,52 +396,417 @@ form {
         font-size: .6rem;
     } 
     
-    /* Combination of the necessary Information */
-    .personal-info,
+    /* Combination of the neccessary Information */
+    .personal-container,
     .contact,
     .idtfn,
-    .driver-info,
-    .medical-info,
+    .driver,
+    .medical,
     .declaration {
-        padding: 1.5rem .8rem 3.5rem .8rem;
+        padding: 1.5rem 1rem 3rem 1rem;
     }
 
-    .personal-info h2,
-    .cti-container h3,
+
+
+    .personal-container h2,
+    .contact-container h3,
     .idtfn-container h4,
-    .medical-info h4,
-    .declaration h4 {
+    .medical-container h4,
+    .driver-container h4,
+    .declaration-container h4 {
         font-size: 1rem;
         font-weight: 500;
         margin-bottom: 1rem;
     }
 
-    /* Personal Information section */
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+    .personal-container h2::after,
+    .contact-container h3::after,
+    .idtfn-container h4::after,
+    .medical-container h4::after,
+    .driver-container h4::after,
+    .declaration-container h4::after {           
+        width: 15%;                 
+        border-bottom: 2px solid #000;         
     }
 
-    .form-body {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: .6rem;
+    .personal-group label,
+    .contact-group label,
+    .contact-body-address label,
+    .idtfn-group label,
+    .driver-group label,
+    .medical-group label,
+    .medical-body-mdc label {
+        font-size: .8rem;
     }
 
-    /* Make 3rd item span across 2 columns */
-    .form-body > :nth-child(3) {
-        grid-column: span 2;
+    .personal-group input,
+    .personal-group select,
+    .contact-group input,
+    .contact-group select,
+    .idtfn-group input,
+    .idtfn-body input,
+    .driver-body input,
+    .driver-group select,
+    .medical-group select,
+    .medical-group input {
+        padding: .5rem;
+        border: 1px solid rgb(163, 161, 161);
     }
 
-    .form-body label {
-        font-size: .9rem;
+    .personal-group,
+    .contact-group,
+    .idtfn-group,
+    .driver-group,
+    .medical-group {
+        gap: .4rem;
     }
 
-    .form-body input,
-    .form-body select {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
+   /* Personal Information section */
+    .personal-container {
+        gap: 1.5rem;
+    }
+    .personal-body {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: .5rem;
+    }
+
+
+/* Contact Section */
+    .contact-container {
+        gap: 1.5rem;
+    }
+
+    .contact-body {
+        grid-gap: .8rem;
+    }
+
+
+    .contact-csp {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: .8rem;
+    }
+
+    .contact-body-address textarea {
+        padding: .4rem;
+        height: 50px;
+    }
+
+    /* Identification styling */
+    .idtfn-container {
+        gap: 1.5rem;
+    }
+
+    .idtfn-body {
+        grid-gap: .8rem;
+    }
+
+    /* table styling */
+    .table-heading {
+        font-size: .8rem;
+    }
+
+    .passport,
+    .driver-id {
+        padding: 7px;
+    }
+
+    .passport i,
+    .driver-id i {
+        font-size: 1.5rem;
         padding: .4rem;
     }
+
+    .passport p,
+    .driver-id p {
+        font-size: .8rem;
+        padding: .4rem;
+    }
+
+    /* Driver Information styling */
+    .driver-container {
+        gap: 1.5rem;
+    }
+
+    .driver-body {
+        grid-gap: .4rem;
+    }
+
+    /* Medical Information styling */
+    .medical-container {
+        gap: 1.5rem;
+    }
+
+    .medical-body {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: .8rem;
+    }
+
+    .medical-body-mdc {
+        grid-gap: .8rem;
+    }
+
+    .medical-body-mdc input {
+        padding: .4rem;
+        border: 1px solid rgb(163, 161, 161);
+        border-radius: 8px;
+        background-color: rgb(243, 241, 241);
+        height: 60px;
+    }
+
+
+    /* Declaration Term styling */
+    .declaration-container {
+        gap: 1.5rem;
+    }
+
+    .declaration-body {
+        gap: .8rem;
+        
+    }
+
+    .declaration-group label {
+        gap: .4rem; 
+        font-size: 0.8rem;
+        line-height: 1.4;
+        padding: .7rem;
+    }
+
+    .declaration-group input[type="checkbox"] {
+        margin-top: 0.2rem; 
+    }
+
+    .button {
+        margin-bottom: -2rem;
+    }
+
 }
+
+
+
+
+
+/* For Mobile Device */
+@media screen and (max-width: 768px) {
+    .header {
+        position: inherit;
+    }
+
+    .container {
+        background-color: rgb(145, 20, 126);
+        gap: .5rem;
+        padding: .8rem;
+    }
+
+    .logo-container {
+        background-color: #000;
+    }
+
+    .logo-container span {
+        font-size: 1.3rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .form-hd-detail p {
+        font-size: .6rem;
+    } 
+    
+    /* Combination of the neccessary Information */
+    .personal-container,
+    .contact,
+    .idtfn,
+    .driver,
+    .medical,
+    .declaration {
+        padding: 1rem .8rem 2rem .8rem;
+    }
+
+
+
+    .personal-container h2,
+    .contact-container h3,
+    .idtfn-container h4,
+    .medical-container h4,
+    .driver-container h4,
+    .declaration-container h4 {
+        font-size: .8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .personal-container h2::after,
+    .contact-container h3::after,
+    .idtfn-container h4::after,
+    .medical-container h4::after,
+    .driver-container h4::after,
+    .declaration-container h4::after {           
+        width: 12%;                 
+        border-bottom: 2px solid #000;         
+    }
+
+    .personal-group label,
+    .contact-group label,
+    .contact-body-address label,
+    .idtfn-group label,
+    .driver-group label,
+    .medical-group label,
+    .medical-body-mdc label {
+        font-size: .7rem;
+    }
+
+    .personal-group input,
+    .personal-group select,
+    .contact-group input,
+    .contact-group select,
+    .idtfn-group input,
+    .idtfn-body input,
+    .driver-body input,
+    .driver-group select,
+    .medical-group select,
+    .medical-group input {
+        padding: .5rem;
+        border: 1px solid rgb(163, 161, 161);
+    }
+
+    .personal-group,
+    .contact-group,
+    .idtfn-group,
+    .driver-group,
+    .medical-group {
+        gap: .3rem;
+    }
+
+   /* Personal Information section */
+    .personal-container {
+        gap: 1rem;
+    }
+    .personal-body {
+        grid-template-columns: 1fr;
+        grid-gap: .7rem;
+    }
+
+
+/* Contact Section */
+    .contact-container {
+        gap: 1.5rem;
+    }
+
+    .contact-body {
+        grid-template-columns: 1fr;
+        grid-gap: .8rem;
+    }
+
+
+    .contact-csp {
+        grid-template-columns: 1fr;
+        grid-gap: .8rem;
+    }
+
+    .contact-body-address textarea {
+        padding: .4rem;
+        height: 50px;
+    }
+
+    /* Identification styling */
+    .idtfn-container {
+        gap: 1.5rem;
+    }
+
+    .idtfn-body {
+        grid-template-columns: 1fr;
+        grid-gap: .8rem;
+    }
+
+    /* table styling */
+    .table-heading {
+        font-size: .8rem;
+    }
+
+    .passport,
+    .driver-id {
+        padding: 7px;
+    }
+
+    .passport i,
+    .driver-id i {
+        font-size: 1.5rem;
+        padding: .4rem;
+    }
+
+    .passport p,
+    .driver-id p {
+        font-size: .8rem;
+        padding: .4rem;
+    }
+
+    /* Driver Information styling */
+    .driver-container {
+        gap: 1.5rem;
+    }
+
+    .driver-body {
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+
+    /* Medical Information styling */
+    .medical-container {
+        gap: 1.5rem;
+    }
+
+    .medical-body {
+        grid-template-columns: 1fr;
+        grid-gap: .8rem;
+    }
+
+    .medical-body-mdc {
+        grid-gap: .8rem;
+    }
+
+    .medical-body-mdc input {
+        padding: .4rem;
+        border: 1px solid rgb(163, 161, 161);
+        border-radius: 8px;
+        background-color: rgb(243, 241, 241);
+        height: 60px;
+    }
+
+
+    /* Declaration Term styling */
+    .declaration-container {
+        gap: 1.5rem;
+    }
+
+    .declaration-body {
+        gap: .8rem;
+        
+    }
+
+    .declaration-group label {
+        gap: .4rem; 
+        font-size: 0.8rem;
+        line-height: 1.4;
+        padding: .7rem;
+    }
+
+    .declaration-group input[type="checkbox"] {
+        margin-top: 0.2rem; 
+    }
+
+    .button {
+        gap: 1rem;
+        margin-bottom: -1rem;
+    }
+
+    .button button {
+        font-size: .8rem;
+    }
+
+}
+

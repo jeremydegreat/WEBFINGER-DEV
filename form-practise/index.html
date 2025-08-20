@@ -14,12 +14,14 @@
     <!-- The Header section -->
     <header class="header">
         <div class="container">
+
             <!-- Logo -->
             <div class="logo-container">
                 <span>FRSC</span>
             </div>
             <H1>Federal Road Safety Corps</H1>
             <p>Driver Enrollment Form</p>
+
             <!-- form Number -->
             <div class="form-hd-detail">
                 <p>Form No FRSC-DEF-2024-001</p>
@@ -28,262 +30,314 @@
         </div>
     </header>
 
-    <!-- main section -->
+    <!-- Main Page here -->
     <main>
-        <section class="personal-info">
-            <h2>Personal Information</h2>
-            <form action="#" method="get" class="form">
-                <div class="form-body">
-                    <label for="surname">Surname *</label>
-                    <label for="first-name">First name *</label>
-                    <label for="middle-name">Middle Name</label>
-                    <input type="text" name="surname" id="surname">
-                    <input type="text" name="first-name" id="first-name">
-                    <input type="text" name="middle-name" id="middle-name">
+        <form action="#" method="post" class="form">
+            <section class="personal-container">
+                <h2>Personal Information</h2>
+                <div class="personal-body">
+                    <div class="personal-group">
+                         <label for="surname">Surname *</label>
+                         <input type="text" name="surname" id="surname" required>
+                    </div>
+                    <div class="personal-group">
+                         <label for="first-name">First name *</label>
+                         <input type="text" name="first-name" id="first-name" required>
+                    </div>
+                    <div class="personal-group">
+                         <label for="middle-name">Middle Name</label>
+                         <input type="text" name="middle-name" id="middle-name">
+                    </div>
                 </div>
-                <div class="form-body">
-                    <label for="dob">Date of Birth *</label>
-                    <label for="status">Marital Status</label>
-                    <label for="gender">Gender *</label>
-                    <input type="date" name="dob" id="dob" placeholder="14/08/2025">
-                    <select name="gender" id="gender">
-                        <option value="">Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="others">Others</option>
-                    </select>
-                    <select name="status" id="status">
-                        <option value="">Select Status</option>
-                        <option value="single">Single</option>
-                        <option value="married">Married</option>
-                        <option value="divorced">divorced</option>
-                        <option value="widow/widower">Widow/Widower</option>
-                    </select>
+                <div class="personal-body">
+                    <div class="personal-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" name="dob" id="dob" class="dob" placeholder="14/08/2025" required>
+                    </div>
+                    <div class="personal-group">
+                        <label for="status">Marital Status</label>
+                        <select name="status" id="status">
+                            <option value="">Select Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">divorced</option>
+                            <option value="widow/widower">Widow/Widower</option>
+                        </select>
+                    </div>
+                    <div class="personal-group">
+                        <label for="gender">Gender *</label>
+                        <select name="gender" id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Others</option> 
+                        </select>
+                    </div>
                 </div>
-                <div class="form-body">
-                    <label for="nationality">Nationality *</label>
-                    <label for="state">State Of Origin</label>
-                    <label for="lga">Local Government Area *</label>
-                    <input type="text" name="nationality" id="nationality" placeholder="Nigerian">
-                    <input list="state" id="state" name="state" placeholder="Start typing">
+                <div class="personal-body">
+                    <div class="personal-group">
+                        <label for="nationality">Nationality *</label>
+                        <input type="text" name="nationality" id="nationality" class="nationality" placeholder="Nigerian">
+                    </div>
+                    <div class="personal-group">
+                        <label for="state">State Of Origin</label>
+                        <input list="state" id="state" name="state" placeholder="Start typing">
+                        
+                        <!-- State List -->
+                        <datalist id="states">
+                            <option value="Abia">
+                            <option value="Adamawa">
+                            <option value="Akwa Ibom">
+                            <option value="Anambra">
+                            <option value="Bauchi">
+                            <option value="Bayelsa">
+                            <option value="Benue">
+                            <option value="Borno">
+                            <option value="Cross River">
+                            <option value="Delta">
+                            <option value="Ebonyi">
+                            <option value="Edo">
+                            <option value="Ekiti">
+                            <option value="Enugu">
+                            <option value="Gombe">
+                            <option value="Imo">
+                            <option value="Jigawa">
+                            <option value="Kaduna">
+                            <option value="Kano">
+                            <option value="Katsina">
+                            <option value="Kebbi">
+                            <option value="Kogi">
+                            <option value="Kwara">
+                            <option value="Lagos">
+                            <option value="Nasarawa">
+                            <option value="Niger">
+                            <option value="Ogun">
+                            <option value="Ondo">
+                            <option value="Osun">
+                            <option value="Oyo">
+                            <option value="Plateau">
+                            <option value="Rivers">
+                            <option value="Sokoto">
+                            <option value="Taraba">
+                            <option value="Yobe">
+                            <option value="Zamfara">
+                            <option value="FCT - Abuja">
+                        </datalist>
+                    </div>
+                    <div class="personal-group">
+                        <label for="lga">Local Government Area *</label>
+                        <input type="text" name="lga" class="lga" id="lga">
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Contact Page -->
+            <section class="contact">
+                <div class="contact-container">
+                    <h3>Contact Information</h3>
+                    <div class="contact-body">
+                        <div class="contact-group">
+                            <label for="phone-no">Phone Number *</label>
+                            <input type="phone-no" name="phone-no" id="phone-no" placeholder="+234 xxx xxx xxxx" required>
+                        </div>
+                        <div class="contact-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                        </div>
+                    </div>
+                    <div class="contact-body-address">
+                        <label for="address">Residential Address *</label>
+                        <textarea name="address" id="address" placeholder="Enter your complete residential address" required></textarea>
+                    </div>
+                    <div class="contact-csp">
+                        <div class="contact-group">
+                            <label for="city">City *</label>
+                            <input type="text" name="city" id="city" required>
+                        </div>
+                        <div class="contact-group">
+                            <label for="state">State</label>
+                            <select name="state" id="state">
+                                <option value="">Select State--</option>
+                                <option value="abia">Abia</option>
+                                <option value="adamawa">Adamawa</option>
+                                <option value="akwa_ibom">Akwa Ibom</option>
+                                <option value="anambra">Anambra</option>
+                                <option value="bauchi">Bauchi</option>
+                                <option value="bayelsa">Bayelsa</option>
+                                <option value="benue">Benue</option>
+                                <option value="borno">Borno</option>
+                                <option value="cross_river">Cross River</option>
+                                <option value="delta">Delta</option>
+                                <option value="ebonyi">Ebonyi</option>
+                                <option value="edo">Edo</option>
+                                <option value="ekiti">Ekiti</option>
+                                <option value="enugu">Enugu</option>
+                                <option value="gombe">Gombe</option>
+                                <option value="imo">Imo</option>
+                                <option value="jigawa">Jigawa</option>
+                                <option value="kaduna">Kaduna</option>
+                                <option value="kano">Kano</option>
+                                <option value="katsina">Katsina</option>
+                                <option value="kebbi">Kebbi</option>
+                                <option value="kogi">Kogi</option>
+                                <option value="kwara">Kwara</option>
+                                <option value="lagos">Lagos</option>
+                                <option value="nasarawa">Nasarawa</option>
+                                <option value="niger">Niger</option>
+                                <option value="ogun">Ogun</option>
+                                <option value="ondo">Ondo</option>
+                                <option value="osun">Osun</option>
+                                <option value="oyo">Oyo</option>
+                                <option value="plateau">Plateau</option>
+                                <option value="rivers">Rivers</option>
+                                <option value="sokoto">Sokoto</option>
+                                <option value="taraba">Taraba</option>
+                                <option value="yobe">Yobe</option>
+                                <option value="zamfara">Zamfara</option>
+                                <option value="fct">FCT - Abuja</option>
+                            </select>
+                        </div>
+                        <div class="contact-group">
+                            <label for="postal-code">Postal Code</label>
+                            <input type="number" name="number" id="number" placeholder="xxxxxxxx">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                    <!-- State List -->
-                    <datalist id="states">
-                        <option value="Abia">
-                        <option value="Adamawa">
-                        <option value="Akwa Ibom">
-                        <option value="Anambra">
-                        <option value="Bauchi">
-                        <option value="Bayelsa">
-                        <option value="Benue">
-                        <option value="Borno">
-                        <option value="Cross River">
-                        <option value="Delta">
-                        <option value="Ebonyi">
-                        <option value="Edo">
-                        <option value="Ekiti">
-                        <option value="Enugu">
-                        <option value="Gombe">
-                        <option value="Imo">
-                        <option value="Jigawa">
-                        <option value="Kaduna">
-                        <option value="Kano">
-                        <option value="Katsina">
-                        <option value="Kebbi">
-                        <option value="Kogi">
-                        <option value="Kwara">
-                        <option value="Lagos">
-                        <option value="Nasarawa">
-                        <option value="Niger">
-                        <option value="Ogun">
-                        <option value="Ondo">
-                        <option value="Osun">
-                        <option value="Oyo">
-                        <option value="Plateau">
-                        <option value="Rivers">
-                        <option value="Sokoto">
-                        <option value="Taraba">
-                        <option value="Yobe">
-                        <option value="Zamfara">
-                        <option value="FCT - Abuja">
-                    </datalist>
-                    <input type="text" name="lga" id="lga">
+            <!-- Identification Section -->
+            <section class="idtfn">
+                <div class="idtfn-container">
+                    <h4>Identification</h4>
+                    <div class="idtfn-body">
+                        <div class="idtfn-group">
+                            <label for="nin">National Identification Number (NIN) *</label>
+                            <input type="text" name="nin" id="nin" placeholder="11 digits">
+                        </div>
+                        <div class="idtfn-group">
+                            <label for="voters-id">Voter ID Number</label>
+                            <input type="text" name="voters-id" id="voters-id" placeholder="Optional">
+                        </div>
+                    </div>
+                    <div class="idtfn-body">
+                        <table class="table-group">
+                            <tr class="table-heading">
+                                <th>Passport Photograph *</th>
+                            </tr>
+                            <tr>
+                                <td class="passport">
+                                    <i class="fa-solid fa-camera"></i>
+                                    <p>Choose Photo</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-group">
+                            <tr class="table-heading">
+                                <th>Current Driver's License (if any)</th>
+                            </tr>
+                            <tr>
+                                <td class="driver-id">
+                                    <i class="fa-solid fa-file"></i>
+                                    <p>Choose File</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="idtfn-body">
+                        <input type="text">
+                        <input type="text">
+                    </div>
                 </div>
-            </form>
-        </section>
+            </section>
 
-        <!-- Contact Page -->
-        <section class="contact">
-            <div class="cti-container">
-                <h3>Contact Information</h3>
-                <div class="contact-info">
-                    <label for="phone-no">Phone Number *</label>
-                    <label for="email">Email Address</label>
-                    <input type="phone-no" name="phone-no" id="phone-no" placeholder="+234 xxx xxx xxxx">
-                    <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            <!-- Drivers information -->
+            <section class="driver">
+                <div class="driver-container">
+                    <h4>Driver Information</h4>
+                    <div class="driver-body">
+                        <div class="driver-group">
+                            <label for="license">License Type Request *</label>
+                            <select name="license" id="license">
+                                <option value="">Select License Type</option>
+                            </select>
+                        </div>
+                        <div class="driver-group">
+                            <label for="exprience">Years of Driving Experience</label>
+                            <input type="number" name="experience" id="experience" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="driver-body">
+                        <div class="driver-group">
+                            <label for="pre-license">Previous License Number (if any)</label>
+                            <input type="number" name="pre-license" id="pre-license" placeholder="Enter previous license number">
+                        </div>
+                        <div class="driver-group">
+                            <label for="pre-license-expiry">Previous License Expiry Date (if any)</label>
+                            <input type="number" name="pre-license-expiry" id="pre-license-expiry" placeholder="14/08/2025">
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-info-address">
-                    <label for="address">Residential Address *</label>
-                    <textarea name="address" id="address" placeholder="Enter your complete residential address"></textarea>
-                </div>
-                <div class="contact-csp">
-                    <label for="city">City *</label>
-                    <label for="state">State</label>
-                    <label for="postal-code">Postal Code</label>
-                    <input type="text" name="city" id="city">
-                    <select name="state" id="state">
-                        <option value="">Select State--</option>
-                        <option value="abia">Abia</option>
-                        <option value="adamawa">Adamawa</option>
-                        <option value="akwa_ibom">Akwa Ibom</option>
-                        <option value="anambra">Anambra</option>
-                        <option value="bauchi">Bauchi</option>
-                        <option value="bayelsa">Bayelsa</option>
-                        <option value="benue">Benue</option>
-                        <option value="borno">Borno</option>
-                        <option value="cross_river">Cross River</option>
-                        <option value="delta">Delta</option>
-                        <option value="ebonyi">Ebonyi</option>
-                        <option value="edo">Edo</option>
-                        <option value="ekiti">Ekiti</option>
-                        <option value="enugu">Enugu</option>
-                        <option value="gombe">Gombe</option>
-                        <option value="imo">Imo</option>
-                        <option value="jigawa">Jigawa</option>
-                        <option value="kaduna">Kaduna</option>
-                        <option value="kano">Kano</option>
-                        <option value="katsina">Katsina</option>
-                        <option value="kebbi">Kebbi</option>
-                        <option value="kogi">Kogi</option>
-                        <option value="kwara">Kwara</option>
-                        <option value="lagos">Lagos</option>
-                        <option value="nasarawa">Nasarawa</option>
-                        <option value="niger">Niger</option>
-                        <option value="ogun">Ogun</option>
-                        <option value="ondo">Ondo</option>
-                        <option value="osun">Osun</option>
-                        <option value="oyo">Oyo</option>
-                        <option value="plateau">Plateau</option>
-                        <option value="rivers">Rivers</option>
-                        <option value="sokoto">Sokoto</option>
-                        <option value="taraba">Taraba</option>
-                        <option value="yobe">Yobe</option>
-                        <option value="zamfara">Zamfara</option>
-                        <option value="fct">FCT - Abuja</option>
-                    </select>
-                    <input type="number" name="number" id="number" placeholder="xxxxxxxx">
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Identification Section -->
-        <section class="idtfn">
-            <div class="idtfn-container">
-                <h4>Identification</h4>
-                <div class="idtfn-body">
-                    <label for="nin">National Identification Number (NIN) *</label>
-                     <label for="voters-id">Voter ID Number</label>
-                    <input type="text" name="nin" id="nin" placeholder="11 digits">
-                    <input type="text" name="voters-id" id="voters-id" placeholder="Optional">
+            <!-- Medical Information Page -->
+            <section class="medical">
+                <div class="medical-container">
+                    <h4>Medical Information </h4>
+                    <div class="medical-body">
+                        <div class="medical-group">
+                            <label for="blood-group">Blood Group</label>
+                            <select name="blood-group" id="blood-group">
+                                <option value="">Select Blood Group</option>
+                            </select>
+                        </div>
+                        <div class="medical-group">
+                            <label for="ec-name">Emergency Contact Name *</label>
+                            <input type="text" name="ec-name" id="ec-name">
+                        </div>
+                        <div class="medical-group">
+                            <label for="ec-phone">Emergency Contact Phone *</label>
+                            <input type="number" name="ec-phone" id="ec-phone" placeholder="+234 xxx xxx xxxx">
+                        </div>
+                    </div>
+                    <div class="medical-body-mdc">
+                        <label for="med-condition">Medical Conditions (if any)</label>
+                        <input type="text" name="med-condition" id="med-condition" placeholder="Please disclose any medical conditions that may affect driving ability">
+                    </div>
                 </div>
-                <div class="idtfn-body">
-                    <table>
-                        <tr>
-                            <th>Passport Photograph *</th>
-                        </tr>
-                        <tr>
-                            <td class="passport">
-                                <i class="fa-solid fa-camera"></i>
-                                <p>Choose Photo</p>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Current Driver's License (if any)</th>
-                        </tr>
-                        <tr>
-                            <td class="driver-id">
-                                <i class="fa-solid fa-file"></i>
-                                <p>Choose File</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="idtfn-body">
-                    <input type="text">
-                    <input type="text">
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Drivers information -->
-        <section class="driver-info">
-            <h4>Driver Information</h4>
-            <div class="driver-info-body">
-                <label for="license">License Type Request *</label>
-                <label for="exprience">Years of Driving Experience</label>
-                <select name="license" id="license">
-                    <option value="">Select License Type</option>
-                </select>
-                <input type="number" name="experience" id="experience" placeholder="0">
-            </div>
-            <div class="driver-info-body">
-                <label for="pre-license">Previous License Number (if any)</label>
-                <label for="pre-license-expiry">Previous License Expiry Date (if any)</label>
-                <input type="number" name="pre-license" id="pre-license" placeholder="Enter previous license number">
-                <input type="number" name="pre-license-expiry" id="pre-license-expiry" placeholder="14/08/2025">
-            </div>
-        </section>
-
-        <!-- Medical Information Page -->
-        <section class="medical-info">
-            <h4>Medical Information </h4>
-            <div class="medical-info-body">
-                <label for="blood-group">Blood Group</label>
-                <label for="ec-name">Emergency Contact Name *</label>
-                <label for="ec-phone">Emergency Contact Phone *</label>
-                <select name="blood-group" id="blood-group">
-                    <option value="">Select Blood Group</option>
-                </select>
-                <input type="text" name="ec-name" id="ec-name">
-                <input type="number" name="ec-phone" id="ec-phone" placeholder="+234 xxx xxx xxxx">
-            </div>
-            <div class="medical-info-body-mdc">
-                <label for="med-condition">Medical Conditions (if any)</label>
-                <input type="text" name="med-condition" id="med-condition" placeholder="Please disclose any medical conditions that may affect driving ability">
-            </div>
-        </section>
-
-        <!-- Declaration Terms -->
-        <section class="declaration">
-            <h4>Declaration</h4>
-            <div class="declaration-info">
-                <div class="declaration-info-body">
-                    <label>
-                        <input type="checkbox">
-                        I hereby declare that all the information provided in this form is true and correct to the best of my knowledge. I understand that providing false information may result in the rejection of my application and possible legal action.
-                    </label>
+            <!-- Declaration Terms -->
+            <section class="declaration">
+                <div class="declaration-container">
+                    <h4>Declaration</h4>
+                    <div class="declaration-body">
+                        <div class="declaration-group">
+                            <label>
+                                <input type="checkbox">
+                                I hereby declare that all the information provided in this form is true and correct to the best of my knowledge. I understand that providing false information may result in the rejection of my application and possible legal action.
+                            </label>
+                        </div>
+                        <div class="declaration-group">
+                            <label>
+                                <input type="checkbox">
+                                I consent to the processing of my personal data for the purpose of driver license application and related services in accordance with Nigeria Data Protection Regulation (NDPR).
+                            </label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="btn">
+                            <button type="button" id="preview-btn">Preview Form</button>
+                        </div>
+                        <div class="btn">
+                            <button type="submit" id="submit-btn">Submit Application</button>
+                        </div>
+                        <div class="btn">
+                            <button type="reset" id="reset-btn">Reset Form</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="declaration-info-body">
-                    <label>
-                        <input type="checkbox">
-                        I consent to the processing of my personal data for the purpose of driver license application and related services in accordance with Nigeria Data Protection Regulation (NDPR).
-                    </label>
-                </div>
-            </div>
-            <div class="button">
-               <div>
-                   <button type="button" id="preview-btn">Preview Form</button>
-               </div>
-                <div>
-                    <button type="submit" id="submit-btn">Submit Application</button>
-                </div>
-                <div>
-                    <button type="reset" id="reset-btn">Reset Form</button>
-                </div>
-            </div>
-        </section>
+            </section>
+        </form>
     </main>
 </body>
 </html>
