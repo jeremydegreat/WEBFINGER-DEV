@@ -11,25 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="x-icon" href="images/my-favicon.webp">
+    <link rel="icon" type="image/webp" href="images/my-favicon.webp">
 </head>
 <body>
+    <!-- Header Page -->
     <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="images/my-logo.png" alt="This is my logo">
-            </div>
-            <div class="links">
-                <a href="#">Home</a>
-                <a href="#">Features</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
-        </nav>
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/my-logo.png" alt="Devclass company logo">
+            </a>
+            <!-- Toggle button for mobile -->
+            <button class="nav-toggle" arial-label="Toggle navigation">
+                <span class="hambuger"></span>
+                <span class="hambuger"></span>
+                <span class="hambuger"></span>
+            </button>
+            <!-- Navigation links -->
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
+
+    <!-- Main Page -->
     <main class="main-container">
-        <div class="main-content">
+        <div class="hero-content">
             <section class="hero">
                 <h1>Welcome to the Future of FX</h1>
                 <p>Discover amazing possibilities with our innovative solutions. We combine <strong>SMC</strong> with <strong>ICT</strong> to create exceptional strategy that can give "U" maximum profitability.</p>
@@ -43,6 +53,8 @@
                 <p>Innovation</p>
             </section>
         </div>
+
+        <!-- Main Features Page -->
         <div class="main-features">
             <h2>Amazing Features</h2>
             <p>Explore what makes us different and why U should choose us</p>
@@ -69,8 +81,10 @@
                 </div>
             </div>
         </div>
+
+        <!-- About Us Page -->
         <div class="about">
-            <div class="about-text">
+            <div class="about-heading">
                 <h4>About Our Company</h4>
                 <p>We are passionate about creating innovative solutions that help businesses grow and succeed in the digital age. Our team of experts combines creativity with technical excellence to deliver outstanding results.</p>
                 <div class="stats">
@@ -88,11 +102,14 @@
                     </div>
                 </div>
             </div>
+            <!-- Office Image -->
             <div class="office-img">
                 <i class="fas fa-building"></i>
                 <p>Our Office</p>
             </div>
         </div>
+
+        <!-- Service Page -->
         <div class="our-services">
             <h6>Our Services</h6>
             <p id="our-services">Comprehensive solutions tailored to your needs</p>
@@ -135,45 +152,54 @@
                 </div>
             </div>
         </div>
-        <div class="testimonies">
-            <h6>What Our Clients Say</h6>
-            <p id="testimonies-p">Don't Just Take Our Words For It</p>
-            <div class="testimonies-card-container">
-                <div class="testimonies-card">
-                    <p id="testimonies-card-p">"Amazing work! The team delivered exactly what we needed and more. Highly recommended!"</p>
-                    <div class="testimonies-card-user">
+
+        <!-- Testominies Page -->
+        <div class="tst-container">
+            <!-- testimonie heading -->
+            <div class="tst-heading">
+                <h6>What Our Clients Say</h6>
+                <p class="tst-page">Don't Just Take Our Words For It</p>
+            </div>
+            <!-- testimonie card 1 -->
+            <div class="tst-card-container">
+                <div class="tst-card">
+                    <p>"Amazing work! The team delivered exactly what we needed and more. Highly recommended!"</p>
+                    <div class="tst-card-user">
                         <i class="fa-solid fa-user"></i>
-                        <div class="card-user-btm">
+                        <div class="card-btm">
                             <h5>Oluebube Prince</h5>
                             <p>Lead, Developer</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonies-card">
-                    <p id="testimonies-card-p">"Professional, reliable, and innovative. They transformed our business completely."</p>
-                    <div class="testimonies-card-user">
+                <!-- testimonie card 2 -->
+                <div class="tst-card">
+                    <p>"Professional, reliable, and innovative. They transformed our business completely."</p>
+                    <div class="tst-card-user">
                         <i class="fa-solid fa-user"></i>
-                        <div class="card-user-btm">
+                        <div class="card-btm">
                             <h5>Benson Yochanan</h5>
                             <p>Mobile Developer</p>
                         </div>
                     </div> 
                 </div>
-                <div class="testimonies-card">
-                    <p id="testimonies-card-p">"Outstanding quality and attention to detail. They exceeded all our expectations."</p>
-                    <div class="testimonies-card-user">
+                <!-- testimonie card 3 -->
+                <div class="tst-card">
+                    <p>"Outstanding quality and attention to detail. They exceeded all our expectations."</p>
+                    <div class="tst-card-user">
                         <i class="fa-solid fa-user"></i>
-                        <div class="card-user-btm">
+                        <div class="card-btm">
                             <h5>Mike Davis</h5>
                             <p>CTO, CodeBrews Labs</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonies-card">
-                    <p id="testimonies-card-p">"Amazing work! The team delivered exactly what we needed and more. Highly recommended!"</p>
-                    <div class="testimonies-card-user">
+                <!-- testimonie card 4 -->
+                <div class="tst-card">
+                    <p>"Amazing work! The team delivered exactly what we needed and more. Highly recommended!"</p>
+                    <div class="tst-card-user">
                         <i class="fa-solid fa-user"></i>
-                        <div class="card-user-btm">
+                        <div class="card-btm">
                             <h5>Jeremy Great</h5>
                             <p>Front-end, Developer</p>
                         </div>
@@ -181,6 +207,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Contact Page -->
         <div class="contact-container">
             <div class="contact-us-page">
                 <h6>Get In Touch</h6>
@@ -224,7 +252,7 @@
                         <option value="forex mobile apps">Forex Trading Apps</option>
                     </select>
                     <br>
-                    <label for="message"></label>
+                    <label for="message" class="sr-only">Message</label>
                     <textarea name="message" id="message" placeholder="Your Message"></textarea>
                     <br>
                     <button type="submit"><strong>Send Message</strong></button>
@@ -232,16 +260,18 @@
             </div>
         </div>
     </main>
+
+    <!-- Footer Page -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
                 <h6 id="footer-container-h6">DevClass</h6>
                 <p>Creating innovative solutions for the digital age.</p>
                 <div class="social-links">
-                    <i class="fa-brands fa-facebook" aria-label="fb-icon"></i>
-                    <i class="fa-brands fa-linkedin" aria-label="in-icon"></i>
-                    <i class="fa-brands fa-instagram" aria-label="instag-icon"></i>
-                    <i class="fa-brands fa-x-twitter" aria-label="x-icon"></i>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-linkedin" aria-label="in-icon"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-instagram" aria-label="instag-icon"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-x-twitter" aria-label="x-icon"></i></a>
                 </div>
             </div>
             <div class="quick-links">
@@ -253,11 +283,11 @@
             </div>
             <div class="service-links">
                 <h6>Services</h6>
-                <a>Web Development</a>
-                <a>UI/UX Design</a>
-                <a>Mobile Apps</a>
-                <a>Forex Trading Apps</a>
-                <a>Consulting</a>
+                <a href="#">Web Development</a>
+                <a href="#">UI/UX Design</a>
+                <a href="#">Mobile Apps</a>
+                <a href="#">Forex Trading Apps</a>
+                <a href="#">Consulting</a>
             </div>
             <div class="contact-links">
                 <h6>Contact Info</h6>

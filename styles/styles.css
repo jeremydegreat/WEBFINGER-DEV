@@ -7,29 +7,79 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    /* max-width: 1200px; */
     margin: 1rem auto;
 }
 
 /* ------Header section--------- */
 .header {
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1rem 4rem;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    gap: 1rem;
+    width: 100%;
 }
 
+/* ---Logo--- */
 .logo img {
     width: 80px;
     height: 80px;
     border-radius: 8px;
 }
 
-.links a {
+/* Navigation Links and Toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background: #333;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    gap: .5rem;
+
+}
+.nav-links a {
     margin: 0 .5rem;
     text-decoration: none;
     color: #000;
@@ -38,8 +88,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.links a:hover {
-    color: red;
+.nav-links a:hover {
+    color: rgb(153, 26, 26);
     border-radius: 8px;
     transition: all .05s ease-in-out;
 }
@@ -50,7 +100,7 @@ body {
 }
 
 
-.main-content {
+.hero-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem 4rem;
@@ -62,6 +112,7 @@ body {
     font-size: 3.5rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
+    line-height: 1.1;
 }
 
 .hero p {
@@ -139,7 +190,7 @@ body {
     color: #fff;
 }
 
-
+/* ----------Main Features------------- */
 .main-features {
     padding: 2rem 4rem;
     
@@ -161,12 +212,13 @@ body {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
 .card {
     background-color: #fff;
+    height: 300px;
     padding: 2rem;
     margin: 2rem 1rem;
     border-radius: 1rem;
@@ -182,7 +234,7 @@ body {
     border-radius: 50%;
     margin-bottom: 1rem;
     width: 75px;
-    height: 75px;
+    height: 73px;
 }
 
 .card h3 {
@@ -192,7 +244,7 @@ body {
 }
 
 .card p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: grey;
 }
 
@@ -211,14 +263,14 @@ body {
 }
 
 
-.about-text h4 {
+.about-heading h4 {
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #000;
     margin-bottom: 1rem;
 }
 
-.about-text p {
+.about-heading p {
     font-size: 1.2rem;
     color: grey;
     margin-bottom: 1rem;
@@ -257,6 +309,7 @@ body {
     position: relative;
     border-radius: 8px;
     width: 50%;
+    height: 250px;
     margin: 1rem auto;
 }
 .office-img i {
@@ -298,7 +351,7 @@ body {
 
 .services {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     padding: 2rem 0;
 }
@@ -361,42 +414,57 @@ body {
 }
 
 /* Testimonies of Our Clients */
-.testimonies {
+.tst-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
     padding: 2rem 4rem;
 }
 
-.testimonies h6 {
+
+/* Testimonie heading styling*/
+.tst-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* -----testimonie heading------ */
+.tst-heading h6 {
     font-size: 2.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #000;
     text-align: center;
 }
 
-#testimonies-p {
+.tst-heading P {
     font-size: 1.2rem;
-    color: grey;
     text-align: center;
-    padding: 1rem;
+    color: grey;
 }
 
-.testimonies-card-container {
+/* Testimonie Card  styling*/
+.tst-card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     padding: 2rem 0;
     margin: 0 auto;
+    
 }
 
-.testimonies-card {
+.tst-card {
     background-color: #fff;
     padding: 2rem;
+    height: auto;
     border-radius: 8px;
     text-align: start;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
     border-left: 4px solid rgb(71, 71, 197);
 }
 
-#testimonies-card-p {
+.tst-card p {
     font-style: italic;
     font-size: 1rem;
     color: grey;
@@ -404,36 +472,46 @@ body {
     line-height: 1.6;
 }
 
-.testimonies-card-user {
+.tst-card-user {
     display: flex;
     align-items: center;
     gap: 1rem;
+    text-align: start;
+    align-items: center;
 }
 
-.testimonies-card-user i {
+.tst-card-user i {
     font-size: 1.1rem;
     background-color: rgb(71, 71, 197);
     color: #fff;
     padding: 1rem;
+
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 
-.card-user-btm h5 {
-    font-size: 1.2rem;
+.card-btm {
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+.card-btm h5 {
+    font-size: 1rem;
     color: #000;
     font-weight: bold;
-    margin-bottom: .5rem;
+    margin-bottom: .2rem;
 }
 
-.card-user-btm p {
+.card-btm p {
     font-size: 1rem;
     color: grey;
+    font-style: normal;
 }
 
-.testimonies-card:hover {
-    transform: scale(1.1);
+.tst-card:hover {
+    transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -492,9 +570,8 @@ body {
     color: #000000a8;
     margin-bottom: .5rem;
 }
+
 /* ---------Form section---------- */
-
-
 .form-container {
     display: flex;
     flex-direction: column;
@@ -671,6 +748,7 @@ body {
 .service-links a {
     font-size: 1rem;
     color: rgb(180, 180, 180);
+    text-decoration: none;
 }
 
 .service-links a:hover {
@@ -736,5 +814,659 @@ body {
     height: .3px;
     background-color: grey;
     margin: 1rem auto;
+}
 
+
+/* Tablet Version */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: .8rem;
+    }
+
+    .container {
+        justify-content: space-around;
+        gap: .8rem;
+    }
+
+/* ---Logo--- */
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .nav-links {
+        gap: .3rem;
+
+    }
+
+    .nav-links a {
+        margin: 0 .4rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+/* -------Main section------- */
+    .main-container {
+        margin: 0 auto;
+    }
+
+/* Hero section styling */
+    .hero-content {
+    padding: 1rem 2rem;
+    }
+
+    .hero h1{
+        width: 55%;
+        font-size: 2rem;
+    }
+
+    .hero p {
+        width: 60%;
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+
+    .buttons {
+        gap: 1rem;
+        padding: .7rem 0 .7rem 0;
+    }
+
+    .button1,
+    .button2 {
+        padding: .8rem 1.6rem;
+        font-size: .8rem;
+    }
+
+    /* Second section[hero-image] */
+    .hero-image {
+        width: 40%;
+        height: 250px;
+    }
+
+    .hero-image i {
+        text-align: center;
+        top: 25%;
+        left: 28%;
+    }
+
+    .hero-image p {
+        top: 57%;
+        left: 20%;
+        font-size: 1.5rem;
+    }
+
+
+    .main-features {
+        padding: 1rem 2rem;
+        
+    }
+
+    .main-features h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-features p {
+        padding: .8rem;
+        font-size: 1.1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        height: 240px;
+        padding: 1.5rem;
+        margin: 1rem .5rem;
+    }
+
+    .card i {
+        font-size: 2rem;
+        padding: 1rem;
+        margin-bottom: .7rem;
+        width: 70px;
+        height: 68px;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    /* About our Company */
+    .about {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+
+    .about-text h4 {
+        font-size: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+        margin-bottom: .8rem;
+    }
+
+
+    .stats {
+        margin: 1.5rem;
+    }
+
+    .stats h5 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .stats p {
+        font-size: 1rem;
+    }
+
+    .stats h5,
+    .stats p {
+        margin: .4rem 0;
+    }
+
+
+    .office-img {
+        margin: .8rem auto;
+    }
+
+    .office-img i {
+        left: 42%;
+        font-size: 2.5rem;
+    }
+
+    .office-img p {
+        left: 22%;
+        font-size: 1.5rem;
+    }
+
+/* ------Our Services--------- */
+    .our-services {
+        padding: 1rem 2ch;
+    }
+
+    .our-services h6 {
+        font-size: 1.5rem;
+    }
+
+    #our-services {
+        font-size: 1rem;
+        padding: .8rem;
+    }
+
+    .services {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        padding: 1.5rem 0;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card i {
+        font-size: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: .8rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        margin-bottom: .8rem;
+    }
+
+    .learn-more {
+        font-size: 1rem;
+    }
+
+/* Testimonies of Our Clients */
+    .tst-container {
+        gap: .8rem;
+        padding: 1rem 2rem;
+    }
+
+    /* Testimonie heading styling*/
+    .tst-heading {
+        gap: .8rem;
+    }
+
+    /* -----testimonie heading------ */
+    .tst-heading h6 {
+        font-size: 1.5rem;
+    }
+
+    .tst-heading P {
+        font-size: 1rem;
+    }
+
+/* Testimonie Card  styling*/
+    .tst-card-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        padding: 1.5rem 0;
+        
+    }
+
+    .tst-card {
+        padding: 1.5rem;
+    }
+
+    .tst-card p {
+        font-size: 1rem;
+        margin-bottom: .8rem;
+    }
+
+    .tst-card-user {
+        gap: .8rem;
+    }
+
+    .tst-card-user i {
+        font-size: 1.1rem;
+        padding: .8rem;
+        width: 45px;
+        height: 43px;
+    }
+
+    .card-btm h5 {
+        font-size: 1rem;
+        margin-bottom: .2rem;
+    }
+
+    .card-btm p {
+        font-size: 1rem;
+    }
+
+    .tst-card:hover {
+        transform: scale(1.05);
+    }
+
+/* -------Contact section------------💨 */
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .contact-us-page h6 {
+        font-size: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
+    #contact-us-p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .contact-info {
+        gap: .8rem;
+    }
+
+    .contact-info i {
+        font-size: 1.1rem;
+        padding: .8rem;
+        width: 45px;
+        height: 43px;
+    }
+
+    .cta-user {
+        margin-bottom: 2rem;
+    }
+
+    .cta-user p {
+        font-size: 1rem;
+    }
+
+    #cta-p {
+        font-size: 1rem;
+    }
+
+    .form-container button {
+        padding: .6rem 1rem;
+        font-size: .8rem;
+        width: 40%;
+    }
+}
+
+
+/* ---------For Mobile Devices----------------- */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: .5rem;
+    }
+
+    
+/* --Logo---- */
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-links {
+        display: none; /* hide links on small screens */
+        flex-direction: column;
+        gap: 1rem;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  } 
+
+  .nav-toggle {
+    display: block; /* show hamburger button */
+  }
+
+    
+
+    .links a {
+        margin: 0 .4rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+/* Hero section styling */
+    .hero-content {
+    padding: 1rem 2rem;
+    }
+
+    .hero h1{
+        width: 100%;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        width: 60%;
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+
+    .buttons {
+        gap: 1rem;
+        padding: .7rem 0 .7rem 0;
+    }
+
+    .button1,
+    .button2 {
+        padding: .8rem 1.6rem;
+        font-size: .8rem;
+    }
+
+    /* Second section[hero-image] */
+    .hero-image {
+        width: 40%;
+        height: 250px;
+    }
+
+    .hero-image i {
+        text-align: center;
+        top: 25%;
+        left: 28%;
+    }
+
+    .hero-image p {
+        top: 57%;
+        left: 20%;
+        font-size: 1.5rem;
+    }
+
+
+    .main-features {
+        padding: 1rem 2rem;
+        
+    }
+
+    .main-features h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-features p {
+        padding: .8rem;
+        font-size: 1.1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        margin: 1.5rem .8rem;
+        
+    }
+
+    .card i {
+        font-size: 1.8rem;
+        padding: .8rem;
+        margin-bottom: .8rem;
+        width: 65px;
+        height: 63px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    /* About our Company */
+    .about {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+
+    .about-text h4 {
+        font-size: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+        margin-bottom: .8rem;
+    }
+
+
+    .stats {
+        margin: 1.5rem;
+    }
+
+    .stats h5 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .stats p {
+        font-size: 1rem;
+    }
+
+    .stats h5,
+    .stats p {
+        margin: .4rem 0;
+    }
+
+
+    .office-img {
+        margin: .8rem auto;
+    }
+
+    .office-img i {
+        left: 42%;
+        font-size: 2.5rem;
+    }
+
+    .office-img p {
+        left: 28%;
+        font-size: 1.5rem;
+    }
+
+/* ------Our Services--------- */
+    .our-services {
+        padding: 1rem 2ch;
+    }
+
+    .our-services h6 {
+        font-size: 1.5rem;
+    }
+
+    #our-services {
+        font-size: 1rem;
+        padding: .8rem;
+    }
+
+    .services {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        padding: 1.5rem 0;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card i {
+        font-size: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: .8rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        margin-bottom: .8rem;
+    }
+
+    .learn-more {
+        font-size: 1rem;
+    }
+
+/* Testimonies of Our Clients */
+    .tst-container {
+        gap: .8rem;
+        padding: 1rem 2rem;
+    }
+
+    /* Testimonie heading styling*/
+    .tst-heading {
+        gap: .8rem;
+    }
+
+    /* -----testimonie heading------ */
+    .tst-heading h6 {
+        font-size: 1.5rem;
+    }
+
+    .tst-heading P {
+        font-size: 1rem;
+    }
+
+/* Testimonie Card  styling*/
+    .tst-card-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        padding: 1.5rem 0;
+        
+    }
+
+    .tst-card {
+        padding: 1.5rem;
+    }
+
+    .tst-card p {
+        font-size: 1rem;
+        margin-bottom: .8rem;
+    }
+
+    .tst-card-user {
+        gap: .8rem;
+    }
+
+    .tst-card-user i {
+        font-size: 1.1rem;
+        padding: .8rem;
+        width: 45px;
+        height: 43px;
+    }
+
+    .card-btm h5 {
+        font-size: 1rem;
+        margin-bottom: .2rem;
+    }
+
+    .card-btm p {
+        font-size: 1rem;
+    }
+
+    .tst-card:hover {
+        transform: scale(1.05);
+    }
+
+/* -------Contact section------------💨 */
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .contact-us-page h6 {
+        font-size: 1.5rem;
+        margin-bottom: .8rem;
+    }
+
+    #contact-us-p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .contact-info {
+        gap: .8rem;
+    }
+
+    .contact-info i {
+        font-size: 1.1rem;
+        padding: .8rem;
+        width: 45px;
+        height: 43px;
+    }
+
+    .cta-user {
+        margin-bottom: 2rem;
+    }
+
+    .cta-user p {
+        font-size: 1rem;
+    }
+
+    #cta-p {
+        font-size: 1rem;
+    }  
 }
