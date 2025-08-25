@@ -1238,7 +1238,7 @@ body {
     }
 
     .hero-image i {
-        font-size: 3.5rem;
+        font-size: 3rem;
         text-align: center;
         top: 25%;
         left: 28%;
@@ -1247,7 +1247,7 @@ body {
     .hero-image p {
         top: 57%;
         left: 16%;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
 
@@ -1460,7 +1460,7 @@ body {
 /* -------Contact section------------💨 */
     .contact-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 1rem 2rem;
     }
@@ -1500,7 +1500,7 @@ body {
     
     .form-container button {
         font-size: .8rem;
-        width: 100%;
+        width: 50%;
     }
 
 /* ------Footer section----- */
