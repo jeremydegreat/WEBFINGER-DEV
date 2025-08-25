@@ -73,6 +73,14 @@ body {
     font-size: .7rem;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid rgb(27, 52, 121);
+    outline: none;           
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
 
 /* Main Page styling starts here */
 main {

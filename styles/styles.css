@@ -644,11 +644,14 @@ body {
 
 /* ------Footer section----- */
 .footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 4rem;
     color: #f0f0f0;
-    align-items: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
 }
-
 
 
 .footer-container {
@@ -656,7 +659,12 @@ body {
     align-items:flex-start;
     justify-content: space-around;
     height: 250px;
-    margin-top: 1rem;
+    margin-top: .5rem;
+}
+
+.footer-container,
+.footer-bottom {
+    width: 100%;
 }
 
 #footer-container-h6 {
@@ -803,7 +811,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    margin: 2rem 0;
+    margin: .5rem 0;
 }
 
 .footer-bottom::before {
@@ -813,7 +821,7 @@ body {
     width: 90%;
     height: .3px;
     background-color: grey;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
 }
 
 
