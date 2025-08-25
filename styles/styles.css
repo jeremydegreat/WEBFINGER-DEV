@@ -1512,25 +1512,26 @@ body {
     .footer-container {
         padding: 0;
         gap: 1rem;
-        height: 200px;
+        height: 250px;
         margin-top: .3rem;
     }
 
     .social-links {
         display: flex;
         gap: .3rem;
+        z-index: 10;
 
     }
 
     .social-links i {
-        font-size: .7rem;
+        font-size: .6rem;
         padding: 1rem;
         width: 40px;
         height: 40px;
     }
 
     .footer-content {
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .footer-content h6 {
