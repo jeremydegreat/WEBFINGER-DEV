@@ -44,6 +44,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 1100;
 }
 
 .hamburger {
@@ -51,27 +52,24 @@ body {
     width: 25px;
     height: 3px;
     background: #333;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
     position: relative;
 }
 
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  width: 25px;
-  height: 3px;
-  background: #333;
-  position: absolute;
-  left: 0;
+/* ==== Toggle Animation (turns into X) ==== */
+.nav-toggle.active .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger::before {
-  top: -8px;
+.nav-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
 }
 
-.hamburger::after {
-  top: 8px;
+.nav-toggle.active .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
-
 
 .nav-links {
     display: flex;
@@ -82,7 +80,7 @@ body {
 .nav-links a {
     margin: 0 .5rem;
     text-decoration: none;
-    color: #000;
+    color: #333;
     font-size: 1.2rem;
     font-weight: 700;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -667,7 +665,7 @@ body {
     width: 100%;
 }
 
-#footer-container-h6 {
+.footer-container h6 {
     font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
@@ -706,14 +704,14 @@ body {
 }
 
 .footer-content h6 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
 
 .footer-content p {
     font-size: 1rem;
-    width: 65%;
+    width: 100%;
     color: rgb(180, 180, 180); 
 }
 
@@ -724,7 +722,7 @@ body {
 }
 
 .quick-links h6 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
@@ -748,7 +746,7 @@ body {
 }
 
 .service-links h6 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
@@ -773,7 +771,7 @@ body {
 
 
 .contact-links h6 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
 }
@@ -1158,7 +1156,6 @@ body {
         padding: .5rem;
     }
 
-    
 /* --Logo---- */
     .logo img {
         width: 50px;
@@ -1166,46 +1163,60 @@ body {
     }
 
     .nav-links {
-        display: none; /* hide links on small screens */
+        display: none;
         flex-direction: column;
+        align-items: center;
+        width: 40%;
+        height: auto;
         gap: 1rem;
-        background: #fff;
+        background: #f0f0f0;
         position: absolute;
         top: 100%;
         right: 0;
-        padding: 1rem 2rem;
+        padding: 1rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+    }
 
-  .nav-links.active {
-    display: flex;
-  } 
+    .nav-links.active {
+        display: flex;
+    } 
 
-  .nav-toggle {
-    display: block; /* show hamburger button */
-  }
+    .nav-toggle {
+        display: block;
+    }
 
-    
-
-    .links a {
+    .nav-links a {
+        color: #6a88ff;
+        background: 1px solid #ccc;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: .5rem;
         margin: 0 .4rem;
         font-size: 1rem;
         font-weight: 600;
     }
+
+    .nav-links a:hover {
+        transition: all .05s ease-in-out;
+        transform: translateX(5px);
+       
+    }
 /* Hero section styling */
     .hero-content {
-    padding: 1rem 2rem;
+    padding: 2rem 4rem;
     }
 
     .hero h1{
+        padding: 1rem 0;
         width: 100%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1.2;
     }
 
     .hero p {
-        width: 60%;
-        font-size: 1rem;
+        width: 100%;
+        font-size: .8rem;
         padding: 1rem 0;
     }
 
@@ -1220,13 +1231,14 @@ body {
         font-size: .8rem;
     }
 
-    /* Second section[hero-image] */
+/* Second section[hero-image] */
     .hero-image {
-        width: 40%;
-        height: 250px;
+        width: 60%;
+        height: 240px;
     }
 
     .hero-image i {
+        font-size: 4rem;
         text-align: center;
         top: 25%;
         left: 28%;
@@ -1234,7 +1246,7 @@ body {
 
     .hero-image p {
         top: 57%;
-        left: 20%;
+        left: 18%;
         font-size: 1.5rem;
     }
 
@@ -1245,20 +1257,25 @@ body {
     }
 
     .main-features h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .main-features p {
         padding: .8rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .features {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 0;
+        justify-items: center;
+        align-items: center;
     }
 
     .card {
+        width: 60%;
+        height: 250px;
         padding: 1.5rem;
         margin: 1.5rem .8rem;
         
@@ -1268,12 +1285,12 @@ body {
         font-size: 1.8rem;
         padding: .8rem;
         margin-bottom: .8rem;
-        width: 65px;
-        height: 63px;
+        width: 60px;
+        height: 58px;
     }
 
     .card h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .card p {
@@ -1282,19 +1299,19 @@ body {
 
     /* About our Company */
     .about {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 1rem 2rem;
     }
 
 
     .about-text h4 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-bottom: .8rem;
     }
 
     .about-text p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: .8rem;
     }
 
@@ -1338,7 +1355,7 @@ body {
     }
 
     .our-services h6 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     #our-services {
@@ -1347,12 +1364,15 @@ body {
     }
 
     .services {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1.2rem;
         padding: 1.5rem 0;
+        justify-items: center;
+        align-items: center;
     }
 
     .service-card {
+        width: 60%;
         padding: 1.5rem;
     }
 
@@ -1368,7 +1388,7 @@ body {
     }
 
     .service-card p {
-        font-size: 1rem;
+        font-size: .8rem;
         margin-bottom: .8rem;
     }
 
@@ -1389,7 +1409,7 @@ body {
 
     /* -----testimonie heading------ */
     .tst-heading h6 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .tst-heading P {
@@ -1398,7 +1418,7 @@ body {
 
 /* Testimonie Card  styling*/
     .tst-card-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1.2rem;
         padding: 1.5rem 0;
         
@@ -1476,5 +1496,115 @@ body {
 
     #cta-p {
         font-size: 1rem;
-    }  
+    }
+    
+    .form-container button {
+        font-size: .8rem;
+        width: 50%;
+    }
+
+/* ------Footer section----- */
+    .footer {
+        padding: 1rem 2rem;
+    }
+
+
+    .footer-container {
+        padding: 0;
+        gap: 1rem;
+        height: 200px;
+        margin-top: .3rem;
+    }
+
+    .social-links {
+        display: flex;
+        gap: .3rem;
+
+    }
+
+    .social-links i {
+        font-size: .7rem;
+        padding: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+    .footer-content h6 {
+        font-size: 1.2rem;
+    }
+
+    .footer-content p {
+        font-size: .9rem;
+        width: 85%; 
+    }
+
+    .quick-links {
+        padding-left: 1rem;
+        gap: .5rem;
+    }
+
+    .quick-links h6 {
+        font-size: 1.2rem;
+    }
+
+    .quick-links a {
+        font-size: .9rem;
+    }
+
+    .service-links {
+        padding-left: 1rem;
+        gap: .5rem;
+        width: 100%;
+    }
+
+    .service-links h6 {
+        font-size: 1.2rem;
+    }
+
+    .service-links a {
+        font-size: .9rem;
+    }
+
+    .contact-links {
+        gap: .5rem;
+    }
+
+
+    .contact-links h6 {
+        font-size: 1.2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+    }
+
+    .contact-links div p {
+        font-size: .9rem;
+    }
+
+
+    .ctl {
+        gap: .5rem;
+    }
+
+    .footer-content,
+    .quick-links,
+    .service-links,
+    .contact-links {
+        margin-top: 2rem;
+        height: 100px;
+    }
+
+    .footer-bottom {
+        font-size: .9rem;
+    }
+
+    .footer-content h6,
+    .quick-links h6,
+    .service-links h6,
+    .contact-links h6 {
+        padding-bottom: .5rem;
+    }
 }
