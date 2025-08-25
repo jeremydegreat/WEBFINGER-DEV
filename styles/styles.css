@@ -1166,8 +1166,8 @@ body {
         display: none;
         flex-direction: column;
         align-items: center;
-        width: 40%;
-        height: auto;
+        width: 100%;
+        height: 300px;
         gap: 1rem;
         background: #f0f0f0;
         position: absolute;
@@ -1204,13 +1204,13 @@ body {
     }
 /* Hero section styling */
     .hero-content {
-    padding: 2rem 4rem;
+    padding: .8rem 1.6rem;
     }
 
     .hero h1{
         padding: 1rem 0;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 1.2;
     }
 
@@ -1233,12 +1233,12 @@ body {
 
 /* Second section[hero-image] */
     .hero-image {
-        width: 60%;
+        width: 70%;
         height: 240px;
     }
 
     .hero-image i {
-        font-size: 4rem;
+        font-size: 3.5rem;
         text-align: center;
         top: 25%;
         left: 28%;
@@ -1246,8 +1246,8 @@ body {
 
     .hero-image p {
         top: 57%;
-        left: 18%;
-        font-size: 1.5rem;
+        left: 16%;
+        font-size: 1.3rem;
     }
 
 
@@ -1274,7 +1274,7 @@ body {
     }
 
     .card {
-        width: 60%;
+        width: 100%;
         height: 250px;
         padding: 1.5rem;
         margin: 1.5rem .8rem;
@@ -1372,7 +1372,7 @@ body {
     }
 
     .service-card {
-        width: 60%;
+        width: 100%;
         padding: 1.5rem;
     }
 
@@ -1500,7 +1500,7 @@ body {
     
     .form-container button {
         font-size: .8rem;
-        width: 50%;
+        width: 100%;
     }
 
 /* ------Footer section----- */
@@ -1543,7 +1543,6 @@ body {
     }
 
     .quick-links {
-        padding-left: 1rem;
         gap: .5rem;
     }
 
@@ -1556,8 +1555,7 @@ body {
     }
 
     .service-links {
-        padding-left: 1rem;
-        gap: .5rem;
+        gap: .1rem;
         width: 100%;
     }
 
@@ -1576,8 +1574,6 @@ body {
 
     .contact-links h6 {
         font-size: 1.2rem;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #fff;
     }
 
     .contact-links div p {
@@ -1605,6 +1601,6 @@ body {
     .quick-links h6,
     .service-links h6,
     .contact-links h6 {
-        padding-bottom: .5rem;
+        padding-bottom: .2rem;
     }
 }
