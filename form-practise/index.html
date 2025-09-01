@@ -9,6 +9,7 @@
     <link rel="icon" type="x-icon" href="images/myFavicon.png">
     <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="form.js"></script>
 </head>
 <body>
     <!-- The Header section -->
@@ -225,9 +226,10 @@
                                 <th>Passport Photograph *</th>
                             </tr>
                             <tr>
-                                <td class="passport">
+                                <td class="passport upload-box" id="passportBox">
                                     <i class="fa-solid fa-camera"></i>
-                                    <p>Choose Photo</p>
+                                    <p id="pasportText">Choose Photo</p>
+                                    <input type="file" id="passportInput" accept="image/*">
                                 </td>
                             </tr>
                         </table>
@@ -236,9 +238,10 @@
                                 <th>Current Driver's License (if any)</th>
                             </tr>
                             <tr>
-                                <td class="driver-id">
+                                <td class="driver-id upload-box" id="licenseBox">
                                     <i class="fa-solid fa-file"></i>
-                                    <p>Choose File</p>
+                                    <p id="licenseText">Choose File</p>
+                                    <input type="file" id="licenseInput" accept="image/*,application/pdf">
                                 </td>
                             </tr>
                         </table>

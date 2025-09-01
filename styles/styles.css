@@ -1147,6 +1147,11 @@ body {
         font-size: .8rem;
         width: 40%;
     }
+
+    .service-links {
+        gap: .8rem;
+    }
+
 }
 
 
