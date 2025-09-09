@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < 60; i++) {
     const t = document.createElement('div');
     t.className = 'tick' + (i % 5 === 0 ? ' major' : '');
+    
     // rotate first, then push outward from center
     t.style.transform = `rotate(${i * 6}deg) translateY(-48%)`;
     ticksContainer.appendChild(t);

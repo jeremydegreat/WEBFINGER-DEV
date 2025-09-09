@@ -34,13 +34,13 @@ body {
     border: 20px solid #fff;
     background: radial-gradient(circle, #fdfdfd, #ddd);
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3),
-        0 0 20px rgba(0, 0, 0, 0.4);
+                0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .center-point {
     position: absolute;
     top: 50%;
-    left: 51%;
+    left: 50%;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -71,14 +71,14 @@ body {
     background-color: yellow;
     border: 1px solid #000;
     transform-origin: bottom center;
-    transform: rotate(360deg);
+    transform: rotate(0deg);
     border-radius: 6px;
     z-index: 2;
 }
 
 .second {
     position: absolute;
-    top: 6%;
+    top: 50%;
     left: 50%;
     width: 2px;
     height: 120px;
@@ -93,101 +93,21 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.numbers  {
+/* Numbers container */
+.numbers {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 1.5rem;
-    font-weight: bold;
     width: 100%;
     height: 100%;
-    transform-origin: center;
     transform: translate(-50%, -50%);
 }
 
-.numb12 {
+/* Each number */
+.num {
     position: absolute;
-    top: 1%;
-    left: 45%;
-    color: red;
-}
-
-.numb6 {
-    position: absolute;
-    top: 85%;
-    left: 45%;
-    color: red;
-}
-
-.numb9 {
-    position: absolute;
-    top: 45%;
-    left: 1%;
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #000;
+    transform: translate(-50%, -50%);
 }
-
-.numb3 {
-    position: absolute;
-    top: 45%;
-    right: 1%;
-    color: #000;
-}
-
-.numb1 {
-    position: absolute;
-    top: 5%;
-    right: 25%;
-    color: #000;
-}
-
-.numb11 {
-    position: absolute;
-    top: 5%;
-    left: 25%;
-    color: #000;
-}
-
-.numb2 {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    color: #000;
-}
-
-.numb10 {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    color: #000;
-}
-
-.numb4 {
-    position: absolute;
-    top: 70%;
-    right: 10%;
-    color: #000;
-}
-
-.numb8 {
-    position: absolute;
-    top: 70%;
-    left: 10%;
-    color: #000;
-}
-.numb5 {
-    position: absolute;
-    top: 82%;
-    right: 25%;
-    color: #000;
-}
-
-.numb7 {
-    position: absolute;
-    top: 82%;
-    left: 25%;
-    color: #000;
-}
-
-
-
-
