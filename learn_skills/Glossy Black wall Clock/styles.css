@@ -1,0 +1,195 @@
+:root {
+    --black: #0b0b0b;
+    --black-2:#111;
+    --highlight: rgba(255,255,255,0.25);
+    --glass: rgba(255,255,255,0.06);
+    --accent: #e2e8f0;
+    --hand: #f8fafc;
+    --sec: #ff3b3b;
+    --shadow-outer: 0 40px 80px rgba(0,0,0,0.65),  0 8px 20px rgba(0,0,0,0.8);
+    --shadow-inner: inset 0 2px 6px rgba(255,255,255,0.06), inset 0 -8px 24px rgba(0,0,0,0.85), inset 0 16px 48px rgba(255,255,255,0.03);
+}
+
+*{box-sizing: border-box;}
+ html,body{
+      height:100%;
+      margin:0;
+      background: radial-gradient(1200px 800px at 70% 20%, #1b1b1b 0%, #0a0a0a 45%, #000 100%);
+      color: var(--accent);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+      display:grid; 
+      place-items:center;
+    }
+
+    .clock-wrap{
+      position: relative;
+      width: min(86vmin, 560px);
+      aspect-ratio: 1 / 1;
+      filter: drop-shadow(0 18px 40px rgba(0,0,0,0.7));
+    }
+
+    /* Outer bezel with shiny black paint */
+    .clock {
+        position:relative;
+        width:100%;
+        height:100%;
+        border-radius:50%;
+        background:
+        radial-gradient(120% 120% at 30% 25%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0) 35%),
+        radial-gradient(70% 70% at 70% 75%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%),
+        linear-gradient(145deg, #0a0a0a, #0f0f0f 30%, #050505 70%, #0a0a0a 100%);
+        box-shadow: var(--shadow-outer), var(--shadow-inner);
+        display:grid; 
+        place-items:center;
+        overflow:hidden;
+    }
+
+    /* Gloss highlight sweep */
+    .clock::before{
+        content:"";
+        position:absolute; 
+        inset:-2%;
+        border-radius:50%;
+        background:
+        radial-gradient(110% 60% at 20% 10%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.12) 22%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0) 60%),
+        radial-gradient(80% 50% at 75% 85%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%);
+        mix-blend-mode: screen;
+        pointer-events:none;
+        filter: blur(0.2px);
+    }
+
+    /* Inner dial */
+    .dial {
+        position:relative;
+        width:84%; 
+        aspect-ratio:1 / 1; 
+        border-radius:50%;
+        background:
+        radial-gradient(circle at 50% 45%, #0f0f0f 0%, #0b0b0b 55%, #030303 100%);
+        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.04), inset 0 30px 60px rgba(0,0,0,0.75);
+        display:grid; 
+        place-items:center;
+    }
+
+    /* Glass layer */
+    .glass{
+        position:absolute; 
+        inset:2.5%; 
+        border-radius:50%;
+        background:
+        radial-gradient(120% 100% at 20% 0%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.06) 35%, rgba(255,255,255,0.02) 60%, rgba(255,255,255,0) 80%),
+        linear-gradient(200deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+        mix-blend-mode: screen;
+        pointer-events:none;
+    }
+
+    /* Ticks */
+    .ticks { 
+        position:absolute; 
+        inset:7%; 
+    }
+
+    .tick{
+        position:absolute; 
+        left:50%; top:50%; 
+        transform-origin: left center;
+        height:2px; width:44%; 
+        opacity:0.85;
+    }
+
+    .tick::before{
+        content:""; display:block; 
+        height:100%; 
+        width:16px; 
+        border-radius:2px;
+        background: var(--accent);
+        box-shadow: 0 0 8px rgba(255,255,255,0.12);
+    }
+
+    /* Major ticks every 5 minutes */
+    .tick.major::before{ 
+        width:24px; 
+        height:3px; 
+    }
+
+    /* Numerals */
+    .numerals {
+        position:absolute; 
+        inset:12%; 
+        display:grid; 
+        place-items:center; 
+        font-weight:600;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.05), 0 0 10px rgba(255,255,255,0.05);
+        letter-spacing: 0.5px;
+    }
+
+    .num { 
+        position:absolute; 
+        transform: translate(-50%, -50%); 
+    }
+
+    /* Hands */
+    .hand {
+        position:absolute; 
+        left:50%; 
+        top:50%; 
+        transform-origin: bottom center;
+        display:flex; 
+        align-items:flex-start; 
+        justify-content:center;
+    }
+    .hand.hour { width:10px; height:26%; }
+    .hand.minute { width:8px; height:34%; }
+    .hand.second { width:3px; height:38%; }
+
+
+    .hand .shaft {
+        width:100%; 
+        border-radius:6px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.4) 6%, rgba(255,255,255,0.1) 15%, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0.04) 100%);
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.4);
+    }
+
+    /* Center cap */
+    .cap {
+        position:absolute; 
+        left:50%; top:50%; 
+        transform:translate(-50%, -50%);
+        width:22px; 
+        height:22px; border-radius:50%;
+        background: radial-gradient(circle at 35% 35%, #fff 0%, #cfcfcf 20%, #8b8b8b 60%, #2b2b2b 100%);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.4);
+        z-index: 6;
+    }
+
+    /* Branding / label */
+    .label{
+        position:absolute; 
+        left:50%; 
+        top:60%; 
+        transform:translateX(-50%);
+        font-size: clamp(10px, 1.8vmin, 14px);
+        color: rgba(255,255,255,0.6);
+    }
+
+    /* Subtle ambient glow from the clock onto the wall */
+    .glow {
+      position:absolute; 
+      inset:-6%; 
+      border-radius:50%; 
+      z-index:-1;
+      background:
+        radial-gradient(60% 60% at 50% 40%, rgba(255,255,255,0.06), rgba(255,255,255,0) 60%),
+        radial-gradient(70% 70% at 50% 60%, rgba(255,255,255,0.05), rgba(255,255,255,0) 70%);
+      filter: blur(30px);
+    }
+
+     /* Smooth hand animation */
+    .sweep { 
+        transition: transform 0.05s linear; 
+    }
+
+    /* Optional subtle parallax when hovering */
+    .clock-wrap:hover .clock { 
+        transform: translateY(-2px); transition: transform 250ms ease; 
+    }
