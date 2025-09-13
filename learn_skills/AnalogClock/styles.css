@@ -18,7 +18,11 @@ body {
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background-color: azure;
+    background: 
+  radial-gradient(circle at 50% 50%, #f0f0f0 0%, #d9d9d9 40%, #bfbfbf 70%, #999 100%),
+  radial-gradient(circle at 50% 50%, #4facfe 0%, #003d99 100%),
+  radial-gradient(circle at 50% 50%, #fff7d1 0%, #f7c948 40%, #d4a017 100%);
+    border-radius: 20%;
     border: 1px solid #ccc;
     width: 400px;
     height: 400px;
@@ -31,31 +35,56 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 20px solid #fff;
-    background: radial-gradient(circle, #fdfdfd, #ddd);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e6e6e6 25%, #b3b3b3 60%, #666666 100%);
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3),
                 0 0 20px rgba(0, 0, 0, 0.4);
 }
+
+.container h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    /* Text effects */
+    color: #f0f0f0;
+    background: linear-gradient(90deg, #f7c948, #d4a017, #f7c948);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Glow + subtle shadow */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6), 
+                 0 0 10px rgba(247, 201, 72, 0.6);
+
+    /* Letter spacing for elegance */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 .center-point {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    background-color: #000;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #444 40%, #000 100%);
+    box-shadow: inset -2px -2px 5px rgba(255,255,255,0.4),
+                inset 2px 2px 6px rgba(0,0,0,0.6),
+                0 2px 4px rgba(0,0,0,0.8);
     transform: translate(-50%, -50%);
     z-index: 4;
 }
 
+
 .hour {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 49%;
     width: 6.5px;
     height: 80px;
-    background-color: green;
+    background: linear-gradient(to bottom, #444 70%, #bfbfbf 30%);
     transform-origin: bottom center;
     transform: rotate(0deg);
     border-radius: 6px;
@@ -66,10 +95,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 4px;
+    width: 5px;
     height: 100px;
-    background-color: yellow;
-    border: 1px solid #000;
+    background: linear-gradient(to bottom, #003d99 50%, #d4a017 50%);
     transform-origin: bottom center;
     transform: rotate(0deg);
     border-radius: 6px;
@@ -78,13 +106,12 @@ body {
 
 .second {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
-    width: 2px;
+    width: 2.5px;
     height: 120px;
-    background-color: red;
+    background: linear-gradient(to bottom, #ff3b3b, #b30000);
     transform-origin: bottom center;
-    transform: rotate(0deg);
     border-radius: 6px;
     z-index: 1;
 }
